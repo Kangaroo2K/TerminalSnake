@@ -1,3 +1,4 @@
+#include<iostream>
 #include<vector>
 
 #include"render.hpp"
@@ -6,6 +7,8 @@ std::vector<std::vector<char>> drawGrid;
 
 void MakeGrid(int height, int width)
 {
+	drawGrid.clear();
+
 	for(int i = 0; i < height; i++)
 	{
 		drawGrid.push_back(std::vector<char>());
@@ -28,5 +31,18 @@ void AddToDrawStack(std::vector<std::vector<char>> queue)
 				drawGrid[i][j] = queue[i][j];
 			}
 		}
+	}
+}
+
+void Draw()
+{
+	for(int i = 0; i < drawGrid.size(); i++)
+	{
+		for(int j = 0; j < drawGrid[i].size(); j++)
+		{
+			std::cout << drawGrid[i][j];
+		}
+
+		std::cout << '\n';
 	}
 }
