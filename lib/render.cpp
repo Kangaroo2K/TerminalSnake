@@ -1,4 +1,5 @@
 #include<iostream>
+#include<cstdlib>
 #include<vector>
 
 #include"render.hpp"
@@ -45,4 +46,11 @@ void Draw()
 
 		std::cout << '\n';
 	}
+}
+
+void Clear()
+{
+	system("clear");
+
+	MakeGrid(drawGrid.size(), drawGrid[0].size());
 }
