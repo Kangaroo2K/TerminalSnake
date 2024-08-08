@@ -15,7 +15,7 @@ int main()
 	{
 		Clear();
 		
-		AddToDrawStack(MakeBorder(height, width, '#'));
+		AddToDrawStack(MakeBorder(height, width, '\033[31m#'));
 
 		Draw();
 	}
